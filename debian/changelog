@@ -1,0 +1,20 @@
+ruby-blade (0.7.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * d/control (Standards-Version): Bump to 4.4.1.
+    (Build-Depends): Add rake, ruby-bundler and ruby-rspec-core for tests.
+  * d/ruby-tests.rake: Run rake tests.
+  * d/watch: Fix version capturing.
+  * d/patches/relax-curses-version.patch: Rename to
+    d/patches/0001-relax-curses-version.patch.
+  * d/patches/0002-Don-t-run-git-in-gemspec.patch: Add patch to strip git
+    command from blade.gemspec.
+  * d/patches/series: Update accordingly.
+
+ -- Daniel Leidert <dleidert@debian.org>  Mon, 11 Nov 2019 14:39:03 +0100
+
+ruby-blade (0.7.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #921056)
+
+ -- Utkarsh Gupta <guptautkarsh2102@gmail.com>  Fri, 01 Feb 2019 20:01:40 +0530

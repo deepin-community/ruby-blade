@@ -1,0 +1,53 @@
+Source: ruby-blade
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Utkarsh Gupta <guptautkarsh2102@gmail.com>
+Build-Depends: debhelper (>= 11~),
+               gem2deb,
+               rake,
+               ruby-activesupport (>= 3.0.0),
+               ruby-blade-qunit-adapter (>= 2.0.1),
+               ruby-bundler,
+               ruby-coffee-script,
+               ruby-coffee-script-source,
+               ruby-curses,
+               ruby-eventmachine,
+               ruby-faye,
+               ruby-rspec-core,
+               ruby-sprockets (>= 3.0),
+               ruby-thor (>= 0.19.1),
+               ruby-useragent (>= 0.16.7),
+               thin (>= 1.6.0)
+Standards-Version: 4.4.1
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-blade.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-blade
+Homepage: https://github.com/javan/blade
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-blade
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-activesupport (>= 3.0.0),
+         ruby-blade-qunit-adapter (>= 2.0.1),
+         ruby-coffee-script,
+         ruby-coffee-script-source,
+         ruby-curses,
+         ruby-eventmachine,
+         ruby-faye,
+         ruby-sprockets (>= 3.0),
+         ruby-thor (>= 0.19.1),
+         ruby-useragent (>= 0.16.7),
+         thin (>= 1.6.0),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Sprockets Toolkit for Building and Testing JavaScript Libraries
+ Blade is a Sprockets toolkit for building and testing JS libraries. Sprockets
+ is a Ruby library for compiling and serving web assets.
+ .
+ To begin with, you may add Blade to your Gemfile and then create a .blade.yml
+ (or blade.yml) file in your project’s root, and define your Sprockets load
+ paths and logical paths.

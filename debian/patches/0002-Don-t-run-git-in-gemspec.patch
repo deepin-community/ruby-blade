@@ -1,0 +1,21 @@
+From: Daniel Leidert <daniel.leidert@wgdd.de>
+Date: Mon, 11 Nov 2019 14:01:34 +0100
+Subject: Don't run git in gemspec
+
+---
+ blade.gemspec | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/blade.gemspec b/blade.gemspec
+index 38c7f65..3ff3f01 100644
+--- a/blade.gemspec
++++ b/blade.gemspec
+@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
+   spec.homepage      = "https://github.com/javan/blade"
+   spec.license       = "MIT"
+ 
+-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
++  spec.files         = Dir["**/*"].reject { |f| f.match(%r{^(test|spec|features)/}) }
+   spec.bindir        = "exe"
+   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+   spec.require_paths = ["lib"]

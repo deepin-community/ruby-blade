@@ -1,0 +1,2 @@
+version=4
+https://github.com/javan/blade/releases .*/v(.*)\.tar\.gz
